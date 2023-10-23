@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>Set alarm</title>
+    <link rel="stylesheet" href="marx.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+
+{% if alarmTime %}
+
+Alarm set at {{ alarmTime }}!
+
+{% else %}
+
+{% if oldAlarm %}
+Cleared existing alarm!
+{% else %}
+No old alarm to clear!
+{% endif %}
+
+{% endif %}
+
+<form action="/">
+    <button type="submit">Go back</button>
+</form>
+
+</body>
+</html>

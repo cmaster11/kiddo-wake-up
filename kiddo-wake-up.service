@@ -1,0 +1,13 @@
+[Unit]
+Description=Kiddo wake up
+After=multi-user.target
+
+[Service]
+Type=idle
+Environment=PATH=/home/pi/.nvm/versions/node/v18.18.2/bin
+ExecStart=/home/pi/.nvm/versions/node/v18.18.2/bin/yarn dev
+WorkingDirectory=/home/pi/code/kiddo-wake-up
+User=pi
+
+[Install]
+WantedBy=multi-user.target

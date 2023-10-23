@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Set alarm</title>
+    <link rel="stylesheet" href="marx.min.css">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+</head>
+<body>
+<form action="/setAlarm">
+    <label for="time">Set the wakeup time for Hubby</label>
+    <input type="time" name="time" id="time"/>
+    <button type="submit">Set alarm</button>
+</form>
+
+<br>
+
+{% if currentAlarm %}
+
+<form action="/cancel">
+    <button type="submit">Cancel existing alarm ({{ currentAlarm }})</button>
+</form>
+
+{% endif %}
+
+</body>
+</html>
